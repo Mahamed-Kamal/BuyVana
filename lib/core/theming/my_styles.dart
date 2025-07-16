@@ -1,0 +1,56 @@
+import 'package:buy_vana/core/theming/colors_manager.dart';
+import 'package:buy_vana/core/theming/my_font_weight.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class MyStyles {
+  static TextStyle font24BlueSemiBold(){
+    return TextStyle(
+      fontSize: 24.sp,
+      color: ColorsManager.mainBlue,
+      fontWeight: MyFontWeight.semiBold,
+    );
+  }
+  static TextStyle font16BlueLight(){
+    return TextStyle(
+      fontSize: 16.sp,
+      color: ColorsManager.mainBlue,
+      fontWeight: MyFontWeight.light,
+    );
+  }
+  static TextStyle font18BlueMedium(){
+    return TextStyle(
+      fontSize: 18.sp,
+      color: ColorsManager.mainBlue,
+      fontWeight: MyFontWeight.medium,
+    );
+  }
+  static TextStyle font18BlueLight(){
+    return TextStyle(
+      fontSize: 18.sp,
+      color: ColorsManager.mainBlue,
+      fontWeight: MyFontWeight.light,
+    );
+  }
+  static TextStyle font18BlackRegular(){
+    return TextStyle(
+      fontSize: 18.sp,
+      color: ColorsManager.myBlack,
+      fontWeight: MyFontWeight.regular,
+    );
+  }
+  static TextStyle font18BlueRegular(){
+    return TextStyle(
+      fontSize: 18.sp,
+      color: ColorsManager.mainBlue,
+      fontWeight: MyFontWeight.regular,
+    );
+  }
+  static TextStyle font20WhiteSemiBold(){
+    return TextStyle(
+      fontSize: 20.sp,
+      color: ColorsManager.myWhite,
+      fontWeight: MyFontWeight.semiBold,
+    );
+  }
+}
