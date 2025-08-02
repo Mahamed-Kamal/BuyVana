@@ -36,6 +36,15 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_native_splash: ^2.4.6
   flutter_screenutil: ^5.9.3
+  shared_preferences: ^2.5.3
+  dio: ^5.8.0+1
+  retrofit: ^4.6.0
+  json_annotation: ^4.9.0
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.1
+  bloc: ^9.0.0
+  pretty_dio_logger: ^1.4.0
+  flutter_svg: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +56,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  json_serializable: ^6.9.5
+  retrofit_generator: ^9.6.0
+  build_runner: ^2.5.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -62,6 +74,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/svg/
+    - assets/icons/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

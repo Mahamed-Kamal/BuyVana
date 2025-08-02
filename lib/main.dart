@@ -1,28 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'core/route_manager/route_generator.dart';
-import 'core/route_manager/routes.dart';
+import 'buy_vana_app.dart';
+import 'core/resources/shared_pref/shared_pref_keys.dart';
+import 'core/resources/shared_pref/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await checkIfLoggedInUser();
+  runApp(const BuyVanaApp());
 }
 
+bool isLoggedInUser = false;
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(430, 932),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: child,
-        onGenerateRoute: RouteGenerator.getRoute,
-        initialRoute: Routes.loginScreen,
-      ),);
+checkIfLoggedInUser() async {
+  String? userToken = await SharedPref.getString(SharedPrefKeys.token);
+  if (userToken != null && userToken.isNotEmpty) {
+    isLoggedInUser = true;
+  } else {
+    isLoggedInUser = false;
   }
 }
 
