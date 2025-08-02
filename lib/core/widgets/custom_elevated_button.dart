@@ -1,5 +1,5 @@
-import 'package:buy_vana/core/theming/colors_manager.dart';
-import 'package:buy_vana/core/theming/my_styles.dart';
+import 'package:buy_vana/core/resources/theming/colors_manager.dart';
+import 'package:buy_vana/core/resources/theming/my_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

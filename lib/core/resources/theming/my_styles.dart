@@ -1,7 +1,8 @@
-import 'package:buy_vana/core/theming/colors_manager.dart';
-import 'package:buy_vana/core/theming/my_font_weight.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'colors_manager.dart';
+import 'my_font_weight.dart';
 
 class MyStyles {
   static TextStyle font24BlueSemiBold(){
@@ -53,4 +54,19 @@ class MyStyles {
       fontWeight: MyFontWeight.semiBold,
     );
   }
+  static TextStyle font16BlueRegular(){
+    return TextStyle(
+      fontSize: 16.sp,
+      color: ColorsManager.mainBlue,
+      fontWeight: MyFontWeight.regular,
+    );
+  }
+  static TextStyle font14BlueLight(){
+    return TextStyle(
+      fontSize: 14.sp,
+      color: ColorsManager.mainBlue,
+      fontWeight: MyFontWeight.light,
+    );
+  }
+
 }
