@@ -14,12 +14,3 @@ Brands _$BrandsFromJson(Map<String, dynamic> json) => Brands(
   createdAt: json['createdAt'] as String?,
   updatedAt: json['updatedAt'] as String?,
 );
-
-Map<String, dynamic> _$BrandsToJson(Brands instance) => <String, dynamic>{
-  'id': instance.id,
-  'name': instance.name,
-  'slug': instance.slug,
-  'image': instance.image,
-  'createdAt': instance.createdAt,
-  'updatedAt': instance.updatedAt,
-};

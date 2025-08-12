@@ -17,9 +17,3 @@ CategoriesResponse _$CategoriesResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$CategoriesResponseToJson(CategoriesResponse instance) =>
-    <String, dynamic>{
-      'results': instance.results,
-      'metadata': instance.pagination,
-      'data': instance.category,
-    };

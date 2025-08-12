@@ -16,10 +16,3 @@ BrandsResponse _$BrandsResponseFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Brands.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
-
-Map<String, dynamic> _$BrandsResponseToJson(BrandsResponse instance) =>
-    <String, dynamic>{
-      'results': instance.results,
-      'metadata': instance.pagination,
-      'data': instance.brands,
-    };

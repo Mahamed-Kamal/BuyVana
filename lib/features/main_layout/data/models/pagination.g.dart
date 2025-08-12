@@ -11,10 +11,3 @@ Pagination _$PaginationFromJson(Map<String, dynamic> json) => Pagination(
   numberOfPages: (json['numberOfPages'] as num?)?.toInt(),
   limit: (json['limit'] as num?)?.toInt(),
 );
-
-Map<String, dynamic> _$PaginationToJson(Pagination instance) =>
-    <String, dynamic>{
-      'currentPage': instance.currentPage,
-      'numberOfPages': instance.numberOfPages,
-      'limit': instance.limit,
-    };

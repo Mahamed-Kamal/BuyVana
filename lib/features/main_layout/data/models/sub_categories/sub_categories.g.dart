@@ -13,11 +13,3 @@ SubCategories _$SubCategoriesFromJson(Map<String, dynamic> json) =>
       slug: json['slug'] as String?,
       category: json['category'] as String?,
     );
-
-Map<String, dynamic> _$SubCategoriesToJson(SubCategories instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'slug': instance.slug,
-      'category': instance.category,
-    };

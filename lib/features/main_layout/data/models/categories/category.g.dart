@@ -15,11 +15,3 @@ Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
   updatedAt: json['updatedAt'] as String?,
 );
 
-Map<String, dynamic> _$CategoryToJson(Category instance) => <String, dynamic>{
-  '_id': instance.id,
-  'name': instance.name,
-  'slug': instance.slug,
-  'image': instance.image,
-  'createdAt': instance.createdAt,
-  'updatedAt': instance.updatedAt,
-};

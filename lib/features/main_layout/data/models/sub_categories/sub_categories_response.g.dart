@@ -17,11 +17,3 @@ SubCategoriesResponse _$SubCategoriesResponseFromJson(
       ?.map((e) => SubCategories.fromJson(e as Map<String, dynamic>))
       .toList(),
 );
-
-Map<String, dynamic> _$SubCategoriesResponseToJson(
-  SubCategoriesResponse instance,
-) => <String, dynamic>{
-  'results': instance.results,
-  'metadata': instance.pagination,
-  'data': instance.subCategories,
-};
