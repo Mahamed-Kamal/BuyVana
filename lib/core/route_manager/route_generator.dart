@@ -1,5 +1,5 @@
 import 'package:buy_vana/core/route_manager/routes.dart';
-import 'package:buy_vana/features/main_layout/main_layout.dart';
+import 'package:buy_vana/features/main_layout/presentation/screens/main_layout_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/auth/presentation/screens/sign_in_screen.dart';
 import '../../features/auth/presentation/screens/sign_up_screen.dart';

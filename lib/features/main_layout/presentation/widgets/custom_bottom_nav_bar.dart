@@ -1,6 +1,6 @@
+import 'package:buy_vana/core/resources/theming/colors_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../core/resources/theming/colors_manager.dart';
 
 class CustomBottomNavBar extends BottomNavigationBarItem {
   final String imagePath;

@@ -19,4 +19,3 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
   email: json['email'] as String?,
   role: json['role'] as String?,
 );
-
