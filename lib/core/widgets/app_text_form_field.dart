@@ -7,7 +7,7 @@ class AppTextFormField extends StatelessWidget {
   final String hintText;
   final TextStyle? hintStyle;
   final double? borderRadius;
-  final BorderSide? borderSide;
+  final Color? borderSideColor;
   final OutlineInputBorder? outlineInputBorder;
   final Widget? suffixIcon;
   final bool? isObscureText;
@@ -20,7 +20,7 @@ class AppTextFormField extends StatelessWidget {
     required this.hintText,
     this.hintStyle,
     this.borderRadius,
-    this.borderSide,
+    this.borderSideColor,
     this.outlineInputBorder,
     this.suffixIcon,
     this.isObscureText,
@@ -37,31 +37,26 @@ class AppTextFormField extends StatelessWidget {
         contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
         hintText: hintText,
         hintStyle: hintStyle ?? MyStyles.font18BlueLight(),
-        enabledBorder:
-            outlineInputBorder ??
-            OutlineInputBorder(
+        enabledBorder: outlineInputBorder ?? OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.r),
               borderSide:
-                  borderSide ??
-                  BorderSide(color: ColorsManager.mainBlue, width: 1),
+                  BorderSide(color: borderSideColor ?? ColorsManager.mainBlue, width: 1),
             ),
-        focusedBorder:
-            outlineInputBorder ??
-            OutlineInputBorder(
+        focusedBorder: outlineInputBorder ?? OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.r),
               borderSide:
-                  borderSide ??
-                  BorderSide(color: ColorsManager.mainBlue, width: 1),
+                  BorderSide(color: borderSideColor ?? ColorsManager.mainBlue, width: 1),
             ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.r),
-          borderSide: BorderSide(color: Colors.red, width: 1),
+          borderSide: BorderSide(color: borderSideColor ?? Colors.red, width: 1),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius?.r ?? 16.r),
-          borderSide: BorderSide(color: Colors.red, width: 1),
+          borderSide: BorderSide(color: borderSideColor ?? Colors.red, width: 1),
         ),
         suffixIcon: suffixIcon,
+        suffixIconColor: ColorsManager.darkBlue
       ),
       onFieldSubmitted: (_) => FocusScope.of(context).unfocus(),
       obscureText: isObscureText ?? false,
@@ -69,7 +64,8 @@ class AppTextFormField extends StatelessWidget {
       controller: controller,
       validator: validator,
       keyboardType: textInputType ?? TextInputType.text,
-      style: MyStyles.font18BlackRegular(),
+      style: MyStyles.font18DarkBlueRegular(),
+      onTapOutside: (_) => FocusScope.of(context).unfocus(),
     );
   }
 }
