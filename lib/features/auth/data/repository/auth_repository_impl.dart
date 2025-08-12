@@ -7,12 +7,14 @@ import 'package:buy_vana/features/auth/data/models/auth_response_model.dart';
 import 'package:buy_vana/features/auth/data/models/sign_in_request_model.dart';
 import 'package:buy_vana/features/auth/data/models/sign_up_request_model.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import '../../domin/repository/auth_repository.dart';
 
+@Injectable(as:AuthRepository)
 class AuthRepositoryImpl implements AuthRepository {
   // Object WebServices
-  AuthDataSourceRemote authDataSourceRemote;
-  AuthRepositoryImpl(this.authDataSourceRemote);
+  final AuthDataSourceRemote authDataSourceRemote;
+  const AuthRepositoryImpl(this.authDataSourceRemote);
 
   @override
   Future<Either<Failures,AuthResponseModel>> signUp(SignUpRequestModel request) async {

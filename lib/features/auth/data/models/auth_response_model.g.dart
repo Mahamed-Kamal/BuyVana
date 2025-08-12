@@ -13,6 +13,12 @@ AuthResponseModel _$AuthResponseModelFromJson(Map<String, dynamic> json) =>
       token: json['token'] as String?,
     );
 
+Map<String, dynamic> _$AuthResponseModelToJson(AuthResponseModel instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+      'user': instance.user,
+      'token': instance.token,
+    };
 
 User _$UserFromJson(Map<String, dynamic> json) => User(
   name: json['name'] as String?,
@@ -20,3 +26,8 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
   role: json['role'] as String?,
 );
 
+Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+  'name': instance.name,
+  'email': instance.email,
+  'role': instance.role,
+};
