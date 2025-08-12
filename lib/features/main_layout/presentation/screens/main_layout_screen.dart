@@ -30,7 +30,7 @@ class _MainLayoutState extends State<MainLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MainScreenAppBar(),
+      appBar: selectedIndex == 3 ? null :const MainScreenAppBar(),
       bottomNavigationBar: SizedAndBorderRadius(
         child: BottomNavigationBar(
           type: BottomNavigationBarType.shifting,

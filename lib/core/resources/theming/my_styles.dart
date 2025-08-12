@@ -33,10 +33,10 @@ class MyStyles {
       fontWeight: MyFontWeight.light,
     );
   }
-  static TextStyle font18BlackRegular(){
+  static TextStyle font18DarkBlueRegular(){
     return TextStyle(
       fontSize: 18.sp,
-      color: ColorsManager.myBlack,
+      color: ColorsManager.darkBlue,
       fontWeight: MyFontWeight.regular,
     );
   }
@@ -108,6 +108,13 @@ class MyStyles {
       fontSize: 12.sp,
       color: ColorsManager.myWhite,
       fontWeight: MyFontWeight.regular,
+    );
+  }
+  static TextStyle font14darkBlueOpacityMedium(){
+    return TextStyle(
+      fontSize: 14.sp,
+      color: ColorsManager.darkBlueLight,
+      fontWeight: MyFontWeight.medium,
     );
   }
 
