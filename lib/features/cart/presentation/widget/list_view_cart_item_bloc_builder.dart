@@ -15,7 +15,7 @@ class ListViewCartItemBlocBuilder extends StatelessWidget {
           if(state.cartRequestStata == RequestStata.loading){
             return isCartLoadingState();
           }
-          else if(state.cartRequestStata == RequestStata.loading){
+          else if(state.cartRequestStata == RequestStata.loaded){
             return isCartLoadedState(state);
           }else{
             return SizedBox.shrink();

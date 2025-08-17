@@ -25,36 +25,37 @@ class CartItemWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Container(
-            height: 130.h,
-            width: 120.w,
-            decoration:BoxDecoration(
-              borderRadius: BorderRadius.circular(16.r),
-            ),
-            child: CachedNetworkImage(
-               imageUrl: cartModel?.data?.products?[index].product?.imageCover??"",
-              placeholder: (context, url) => const Center(child: CircularProgressIndicator(color: ColorsManager.mainBlue)),
-              errorWidget: (context, url, error) => const Icon(Icons.error),
-              imageBuilder: (context, imageProvider) {
-                return Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16.r),
-                    border: Border.all(
-                      color: ColorsManager.containerGray
-                    ),
-                    image: DecorationImage(
-
-                      image: imageProvider,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                );
-              }
-            ),
-
-          ),
-
           Expanded(
+            flex: 2,
+            child: Container(
+              height: 124.h,
+              width: 120.w,
+              decoration:BoxDecoration(
+                borderRadius: BorderRadius.circular(16.r),
+              ),
+              child: CachedNetworkImage(
+                 imageUrl: cartModel?.data?.products?[index].product?.imageCover??"",
+                placeholder: (context, url) => const Center(child: CircularProgressIndicator(color: ColorsManager.mainBlue)),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
+                imageBuilder: (context, imageProvider) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16.r),
+                      border: Border.all(
+                        color: ColorsManager.containerGray
+                      ),
+                      image: DecorationImage(
+                        image: imageProvider,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  );
+                }
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 4,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal:8.w),
               child: Column(
