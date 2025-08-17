@@ -12,7 +12,7 @@ class SubCategoriesList extends StatelessWidget {
       child: Column(
         children: [
           const CategoryCardItemBlocBuilder(),
-          const Expanded(child: GridViewBlocBuilder(),
+          const Expanded(child:GridViewBlocBuilder(),
           ),
         ],
       ),

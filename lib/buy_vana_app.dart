@@ -18,6 +18,9 @@ class BuyVanaApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: ColorsManager.myWhite,
           appBarTheme: AppBarTheme(
+            iconTheme: IconThemeData(
+              color: ColorsManager.mainBlue
+            ),
             backgroundColor: ColorsManager.myWhite,
             surfaceTintColor: ColorsManager.myWhite,
           ),

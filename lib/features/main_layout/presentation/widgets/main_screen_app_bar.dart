@@ -1,6 +1,7 @@
 import 'package:buy_vana/core/resources/assets_manager.dart';
 import 'package:buy_vana/core/resources/theming/colors_manager.dart';
 import 'package:buy_vana/core/resources/theming/my_styles.dart';
+import 'package:buy_vana/core/route_manager/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,38 +13,36 @@ class MainScreenAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 120.h,
-      title: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text("BuyVana",style: MyStyles.font24BlueSemiBold()),
-          SizedBox(height: 12.h),
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  style: MyStyles.font16BlueRegular(),
-                  decoration:  InputDecoration(
-                    hintText:  "What do you search for ?",
-                    hintStyle:  MyStyles.font14BlueLight(),
-                    border: _getStyleBorder(),
-                    enabledBorder: _getStyleBorder(),
-                    disabledBorder: _getStyleBorder(),
-                    focusedBorder: _getStyleBorder(),
-                    prefixIcon: const Icon(Icons.search,color:ColorsManager.mainBlue),
+      title:Text("BuyVana",style: MyStyles.font24BlueSemiBold()),
+      bottom: PreferredSize(preferredSize: Size(100.w, 60.h),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal:14.w,vertical: 8.h),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    style: MyStyles.font16BlueRegular(),
+                    decoration:  InputDecoration(
+                      hintText:  "What do you search for ?",
+                      hintStyle:  MyStyles.font14BlueLight(),
+                      border: _getStyleBorder(),
+                      enabledBorder: _getStyleBorder(),
+                      disabledBorder: _getStyleBorder(),
+                      focusedBorder: _getStyleBorder(),
+                      prefixIcon: const Icon(Icons.search,color:ColorsManager.mainBlue),
+                    ),
+
                   ),
-
                 ),
-              ),
-              SizedBox(width: 12.w,),
-              IconButton(
-                onPressed: (){},
-                icon:SvgPicture.asset(SvgIcons.icShopping),
-              ),
+                SizedBox(width: 12.w,),
+                IconButton(
+                  onPressed: ()=> Navigator.pushNamed(context,Routes.cartScreen),
+                  icon:SvgPicture.asset(SvgIcons.icShopping),
+                ),
 
-            ],
-          ),
-        ],
-      ),
+              ],
+            ),
+          )),
     );
   }
 
