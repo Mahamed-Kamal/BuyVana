@@ -1,16 +1,59 @@
-# buy_vana
+# BuyVana Store Shopping App
+ BuyVana is a full-featured shopping app that allows users to browse products, add them to their cart,
+ and complete purchases smoothly and efficiently.
 
-A new Flutter project.
+## Technologies Used
+- Clean Architecture for structured and maintainable code.
+- Dependency Injection for managing app dependencies efficiently.
+- Retrofit for API integration and network calls.
+- JSON Serialization for parsing and handling JSON data effectively.
+- Bloc for state management.
+- Shimmer for optimized loading in HomeScreen And CategoriesScreen
+- Cached Network Image  for optimized image loading.
+- Flutter ScreenUtil for responsive UI design.
+- 
+## Features
+- Authentication Sign up and Sign in using API integration.
+- Browse products by category.
+- Add products to the cart and manage quantities.
+- Responsive and smooth user interface.
+- State management using Bloc/Provider.
+- Interactive UI with animations and Shimmer effects.
 
-## Getting Started
+## App Screenshots
 
-This project is a starting point for a Flutter application.
+### Splash Screen
 
-A few resources to get you started if this is your first Flutter project:
+![splash_screen.jpg](assets/screenshots/splash_screen.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### SignUp Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![sign_up_screen.jpg](assets/screenshots/sign_up_screen.jpg)
+
+### SignIn Screen 
+
+![sign_in_screen.jpg](assets/screenshots/sign_in_screen.jpg)
+
+### HomeTap Screen
+
+![home.jpg](assets/screenshots/home.jpg)
+
+### HomeTap for Loading with Shimmer Screen  
+
+![home_loading_shimmer.jpg](assets/screenshots/home_loading_shimmer.jpg)
+
+### CategoriesTap Screen
+
+![sub_categories_shimmer.jpg](assets/screenshots/sub_categories_shimmer.jpg)
+
+### CategoriesTap for Loading with Shimmer Screen
+
+![categories_shimmer.jpg](assets/screenshots/categories_shimmer.jpg)
+
+### Product Screen
+
+![product_screen.jpg](assets/screenshots/product_screen.jpg)
+
+### Product for Loading  Screen
+
+![product_screen_loading.jpg](assets/screenshots/product_screen_loading.jpg)

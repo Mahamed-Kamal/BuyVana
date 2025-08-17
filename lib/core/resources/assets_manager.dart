@@ -5,6 +5,8 @@ class SvgIcons{
   static const String icFavourite = "assets/svg/ic_favourite.svg";
   static const String icProfile = "assets/svg/ic_profile.svg";
   static const String icShopping = "assets/svg/ic_shopping_cart.svg";
+  static const String icHeartBlue = "assets/svg/ic_heart_blue.svg";
+  static const String icHeart = "assets/svg/ic_heart.svg";
 }
 class AssetsImages {
   static const String carouselSlider1= "assets/images/CarouselSlider1.png";

@@ -18,7 +18,7 @@ class GridViewCategoriesItem extends StatelessWidget {
           height: 100.h,
           width: 100.w,
           fit: BoxFit.cover,
-          imageUrl: categoryModel[index].image??"",
+          imageUrl: categoryModel[index].image?? "",
           placeholder: (context, url) => const Center(child: CircularProgressIndicator(color: ColorsManager.mainBlue)),
           errorWidget: (context, url, error) => const Center(child: Icon(Icons.error,color:Colors.red)),
           imageBuilder: (context, imageProvider) {

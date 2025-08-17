@@ -1,5 +1,7 @@
 import 'package:buy_vana/core/route_manager/routes.dart';
+import 'package:buy_vana/features/cart/presentation/screens/cart_screen.dart';
 import 'package:buy_vana/features/main_layout/presentation/screens/main_layout_screen.dart';
+import 'package:buy_vana/features/products/presentation/screens/products_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/auth/presentation/screens/sign_in_screen.dart';
 import '../../features/auth/presentation/screens/sign_up_screen.dart';
@@ -10,20 +12,15 @@ class RouteGenerator {
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case Routes.signUpScreen:
-        return MaterialPageRoute(builder: (_) =>   const SignUpScreen());
+        return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) =>   const MainLayout());
+        return MaterialPageRoute(builder: (_) => const MainLayout());
+      case Routes.productScreen:
+        return MaterialPageRoute(builder: (_) => const ProductsScreen());
+      case Routes.cartScreen:
+        return MaterialPageRoute(builder: (_) => const CartScreen());
       default:
         return null;
     }
   }
-
-  // static Route<dynamic> unDefinedRoute() {
-  //   return MaterialPageRoute(
-  //     builder: (_) => Scaffold(
-  //       appBar: AppBar(title: const Text('No Route Found')),
-  //       body: const Center(child: Text('No Route Found')),
-  //     ),
-  //   );
-  // }
 }

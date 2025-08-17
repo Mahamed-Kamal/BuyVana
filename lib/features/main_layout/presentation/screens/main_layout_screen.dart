@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import '../widgets/main_screen_app_bar.dart';
 import '../widgets/sized_and_border_radius.dart';
 
-
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
 
@@ -19,7 +18,6 @@ class MainLayout extends StatefulWidget {
 
 class _MainLayoutState extends State<MainLayout> {
    int selectedIndex = 0;
-
    List<Widget> tabs = [
     const HomeTap(),
     const CategoriesTap(),
@@ -30,7 +28,7 @@ class _MainLayoutState extends State<MainLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: selectedIndex == 3 ? null :const MainScreenAppBar(),
+      appBar: selectedIndex == 3 ? null : const MainScreenAppBar(),
       bottomNavigationBar: SizedAndBorderRadius(
         child: BottomNavigationBar(
           type: BottomNavigationBarType.shifting,
